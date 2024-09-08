@@ -1,0 +1,11 @@
+import math
+
+def arr(*numm):
+    sum = 0
+    for i in numm:
+        sqrt_i = int(math.sqrt(i))
+        if sqrt_i * sqrt_i == i:  # Check if the number is not a perfect square
+            sum += 1
+    return sum
+
+print(arr(64, 16, 38, 81, 50, 100))
