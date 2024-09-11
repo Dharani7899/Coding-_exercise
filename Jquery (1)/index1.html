@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="./jqu/jquery-3.7.1.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      $(function () {
+        // Change text inside .box1
+        $(".box1").text("box2 is here");
+
+        // Change background color of .box1
+        $(".box1").css("background-color", "yellow");
+
+        // Change the background color of the input
+        $("input").css("background-color", "red");
+
+        // Change the background color of all elements with class .item
+        $(".item").click(function () {
+          $(this).siblings().css("background-color", "red");
+        });
+      });
+    </script>
+
+    <input type="text" placeholder="hai all" />
+    <div class="box1">Box1 is here</div>
+
+    <div class="container">
+      <div class="item">hai</div>
+      <div class="item">bai</div>
+      <div class="item">sai</div>
+    </div>
+  </body>
+</html>
